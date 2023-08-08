@@ -1,0 +1,61 @@
+.main{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	margin: 1%;
+}
+.header{
+	background-color: #f21f1f;
+	color: white;
+	max-height: max-content;
+}
+.heading > p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	margin-bottom: 6px;
+}
+.heading{
+	padding-top: 1%;
+	
+}
+.form-input{
+	margin-left: 12%;
+	padding-bottom: 2%;
+}
+.text-input{
+	height: 32px;
+    width: 64%;
+}
+.btn-submit{
+	height: 38px;
+    width: 20%;
+	
+}
+input::placeholder{
+	font-size: 1.5em;
+} 
+.contain{
+	width: inherit;
+
+}
+.row:nth-child(even){
+	background-color: #ebe8e8;
+}
+.row:nth-child(odd){
+	background-color: #f8f8fb;
+}
+.row{
+	height: 2.5em;
+	column-count: 2;
+	column-width: 1fr 1fr;
+}
+.col-1{
+	font-size: 1.4em;
+    padding: 6px 5%;
+}
+.col-2{
+	display: flex;
+	justify-content: end;
+}
