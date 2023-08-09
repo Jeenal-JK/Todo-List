@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 function From() {
 	const [items, setItems] = useState([]);
 	const [newItemTitle, setNewItemTitle] = useState('');
+	// const [searchQuery, setSearchQuery] = useState('');
 
 
 	useEffect(() => {
@@ -46,7 +47,11 @@ function From() {
 		else {
 			window.alert("Special Character Are Not Allow ")
 		}
-	};
+	}
+	
+	const filterData = items.filter((record)=> record.title.toLowerCase().includes(newItemTitle.toLowerCase()));
+	
+
 
 
 	return (<>
@@ -61,10 +66,13 @@ function From() {
 
 
 							<input type="text"
-								placeholder="Title..."
+								placeholder="Title.."
 								className="text-input"
 								value={newItemTitle}
 								onChange={handleInputChange}
+							// 	value={searchQuery}
+                            // onChange={(e) => setSearchQuery(e.target.value)}
+
 								required
 							/>
 							<button className="btn-submit">Add</button>
@@ -73,8 +81,9 @@ function From() {
 
 				</section>
 				<section className="contain">
+				
 					<div className="table-data">
-						{items.map((item, index) => (
+						{filterData.map((item, index) => (
 
 							<div key={index} className="row">
 								<div className="col-1">
